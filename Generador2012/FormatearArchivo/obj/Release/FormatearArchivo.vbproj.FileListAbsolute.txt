@@ -1,0 +1,8 @@
+C:\CAFSoft\Proyectos\Generador2012\FormatearArchivo\bin\Release\FormatearArchivo.dll
+C:\CAFSoft\Proyectos\Generador2012\FormatearArchivo\bin\Release\FormatearArchivo.pdb
+C:\CAFSoft\Proyectos\Generador2012\FormatearArchivo\bin\Release\FormatearArchivo.xml
+C:\CAFSoft\Proyectos\Generador2012\FormatearArchivo\obj\Release\FormatearArchivo.Resources.resources
+C:\CAFSoft\Proyectos\Generador2012\FormatearArchivo\obj\Release\FormatearArchivo.dll
+C:\CAFSoft\Proyectos\Generador2012\FormatearArchivo\obj\Release\FormatearArchivo.xml
+C:\CAFSoft\Proyectos\Generador2012\FormatearArchivo\obj\Release\FormatearArchivo.pdb
+C:\CAFSoft\Proyectos\Generador2012\FormatearArchivo\obj\Release\FormatearArchivo.vbproj.GenerateResource.Cache

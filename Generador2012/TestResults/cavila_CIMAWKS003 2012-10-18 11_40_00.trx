@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f5e2f2e2-f6ca-4ede-8e61-2fe4ed3cd2f0" name="cavila@CIMAWKS003 2012-10-18 11:40:00" runUser="CIMAGROUP\cavila" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="8c65fd7e-c833-49e0-af37-4006e2e30d8c">
+    <Description>Esta es la configuración de pruebas predeterminada para una ejecución de pruebas local.</Description>
+    <Deployment enabled="false" runDeploymentRoot="cavila_CIMAWKS003 2012-10-18 11_40_00">
+      <DeploymentItem filename="C:\CAFSoft\Proyectos\Generador2012\BussinesObject\bin\Release\Cimagroup.Generador2012.GeneradorBussinesObject.dll" />
+      <DeploymentItem filename="C:\CAFSoft\Proyectos\Generador2012\DataAccessLayer\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.dll" />
+      <DeploymentItem filename="C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorBussinesLogic.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-10-18T11:40:00.1947468-03:00" queuing="2012-10-18T11:40:00.4547728-03:00" start="2012-10-18T11:40:00.5067780-03:00" finish="2012-10-18T11:40:01.1768450-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="CIMAWKS003" outcome="Warning" timestamp="2012-10-18T11:40:00.2677541-03:00">
+        <Text>La implementación está deshabilitada. No se implementó el elemento  'Cimagroup.Generador2012.GeneradorBussinesLogic.dll' en la prueba 'ModulosPruebasTest.ModeloModulosTESTTest.xToStringTest'.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="xToStringTest" storage="c:\cafsoft\proyectos\generador2012\modulospruebastest\bin\release\modulospruebastest.dll" id="844a84fb-7138-d75b-b6b8-4044fa4e6184">
+      <DeploymentItems>
+        <DeploymentItem filename="Cimagroup.Generador2012.GeneradorBussinesLogic.dll" />
+      </DeploymentItems>
+      <Execution id="15bd947a-b8b9-48dc-aab0-adb12116f477" />
+      <TestMethod codeBase="C:/CAFSoft/Proyectos/Generador2012/ModulosPruebasTest/bin/Release/ModulosPruebasTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ModulosPruebasTest.ModeloModulosTESTTest, ModulosPruebasTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="xToStringTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Resultados que no están en la lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="844a84fb-7138-d75b-b6b8-4044fa4e6184" executionId="15bd947a-b8b9-48dc-aab0-adb12116f477" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="15bd947a-b8b9-48dc-aab0-adb12116f477" testId="844a84fb-7138-d75b-b6b8-4044fa4e6184" testName="xToStringTest" computerName="CIMAWKS003" duration="00:00:00.0674196" startTime="2012-10-18T11:40:00.5267800-03:00" endTime="2012-10-18T11:40:01.1318405-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="15bd947a-b8b9-48dc-aab0-adb12116f477">
+      <Output>
+        <ErrorInfo>
+          <Message>El método de prueba ModulosPruebasTest.ModeloModulosTESTTest.xToStringTest produjo la excepción: 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.</Message>
+          <StackTrace>   en Cimagroup.Generador2012.GeneradorModulosPruebas.ModeloModulosTEST_Accessor.xToString(Object&amp; tipoCampo, Object&amp; cantidad)
+   en ModulosPruebasTest.ModeloModulosTESTTest.xToStringTest() en C:\CAFSoft\Proyectos\Generador2012\ModulosPruebasTest\ModeloModulosTESTTest.vb:línea 71
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

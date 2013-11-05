@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SubsidiarioDPM
+</name>
+</assembly>
+<members>
+<member name="P:SubsidiarioDPM.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SubsidiarioDPM.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:SubsidiarioDPM.My.Resources.Resources.CONECTDB_CARTERA">
+	<summary>
+  Looks up a localized string similar to Data Source=CIMAWKS003\CIMASQLEXPRESS;Initial Catalog=CarteraDPM;Integrated Security=True;Connect Timeout=300;.
+</summary>
+</member><member name="P:SubsidiarioDPM.My.Resources.Resources.CONECTDB_SUBSIDIARIO">
+	<summary>
+  Looks up a localized string similar to Data Source=CIMAWKS003\CIMASQLEXPRESS;Initial Catalog=Subsidiario;Integrated Security=True.
+</summary>
+</member><member name="P:SubsidiarioDPM.My.Resources.Resources.PATH_APP">
+	<summary>
+  Looks up a localized string similar to C:\1_Paso\Labs\Subsidiario.
+</summary>
+</member><member name="P:SubsidiarioDPM.My.Resources.Resources.PATH_CARTERA">
+	<summary>
+  Looks up a localized string similar to C:\1_Paso\Labs\Subsidiario\Cartera.
+</summary>
+</member><member name="P:SubsidiarioDPM.My.Resources.Resources.PATH_SUBSIDIARIO">
+	<summary>
+  Looks up a localized string similar to C:\1_Paso\Labs\Subsidiario\Subsidiario.
+</summary>
+</member><member name="T:SubsidiarioDPM.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

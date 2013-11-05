@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d974bd7e-b7ba-4730-bb90-0add3e5f8a93" name="cavila@CIMAWKS003 2012-10-11 10:42:53" runUser="CIMAGROUP\cavila" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="8c65fd7e-c833-49e0-af37-4006e2e30d8c">
+    <Description>Esta es la configuración de pruebas predeterminada para una ejecución de pruebas local.</Description>
+    <Deployment enabled="false" runDeploymentRoot="cavila_CIMAWKS003 2012-10-11 10_42_53">
+      <DeploymentItem filename="C:\CAFSoft\Proyectos\Generador2012\BussinesObject\bin\Release\Cimagroup.Generador2012.GeneradorBussinesObject.dll" />
+      <DeploymentItem filename="C:\CAFSoft\Proyectos\Generador2012\DataAccessLayer\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.dll" />
+      <DeploymentItem filename="C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorBussinesLogic.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-10-11T10:42:53.1959469-04:00" queuing="2012-10-11T10:42:53.3709469-04:00" start="2012-10-11T10:42:53.3979469-04:00" finish="2012-10-11T10:42:53.8099469-04:00" />
+  <ResultSummary outcome="Inconclusive">
+    <Counters total="3" executed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="3" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GeneradorModulosPruebasConstructorTest2" storage="c:\cafsoft\proyectos\generador2012\modulospruebastest\bin\release\modulospruebastest.dll" id="98bd90ff-d47f-9e30-2913-436ad446c212">
+      <Execution id="c3b1d074-da0f-4e46-88fb-f2c041dd5f3e" />
+      <TestMethod codeBase="C:/CAFSoft/Proyectos/Generador2012/ModulosPruebasTest/bin/Release/ModulosPruebasTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ModulosPruebasTest.GeneradorModulosPruebasTest, ModulosPruebasTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GeneradorModulosPruebasConstructorTest2" />
+    </UnitTest>
+    <UnitTest name="GeneradorModulosPruebasConstructorTest1" storage="c:\cafsoft\proyectos\generador2012\modulospruebastest\bin\release\modulospruebastest.dll" id="4ee27bb8-a2cd-7a1a-1b73-367dad79afe2">
+      <Execution id="b324711a-53c5-4e58-a8ad-0e9cbf71c9a8" />
+      <TestMethod codeBase="C:/CAFSoft/Proyectos/Generador2012/ModulosPruebasTest/bin/Release/ModulosPruebasTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ModulosPruebasTest.GeneradorModulosPruebasTest, ModulosPruebasTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GeneradorModulosPruebasConstructorTest1" />
+    </UnitTest>
+    <UnitTest name="GeneradorModulosPruebasConstructorTest" storage="c:\cafsoft\proyectos\generador2012\modulospruebastest\bin\release\modulospruebastest.dll" id="1baf684c-476a-a486-c39f-aab6f332bcb3">
+      <Execution id="dcf606e7-d4ef-4068-85e4-2d5e19cdd1a7" />
+      <TestMethod codeBase="C:/CAFSoft/Proyectos/Generador2012/ModulosPruebasTest/bin/Release/ModulosPruebasTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ModulosPruebasTest.GeneradorModulosPruebasTest, ModulosPruebasTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GeneradorModulosPruebasConstructorTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Resultados que no están en la lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="1baf684c-476a-a486-c39f-aab6f332bcb3" executionId="dcf606e7-d4ef-4068-85e4-2d5e19cdd1a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ee27bb8-a2cd-7a1a-1b73-367dad79afe2" executionId="b324711a-53c5-4e58-a8ad-0e9cbf71c9a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="98bd90ff-d47f-9e30-2913-436ad446c212" executionId="c3b1d074-da0f-4e46-88fb-f2c041dd5f3e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="dcf606e7-d4ef-4068-85e4-2d5e19cdd1a7" testId="1baf684c-476a-a486-c39f-aab6f332bcb3" testName="GeneradorModulosPruebasConstructorTest" computerName="CIMAWKS003" duration="00:00:00.0609522" startTime="2012-10-11T10:42:53.4079469-04:00" endTime="2012-10-11T10:42:53.7419469-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dcf606e7-d4ef-4068-85e4-2d5e19cdd1a7">
+      <Output>
+        <ErrorInfo>
+          <Message>Error de Assert.Inconclusive. TODO: Implementar código para comprobar el destino</Message>
+          <StackTrace>   en ModulosPruebasTest.GeneradorModulosPruebasTest.GeneradorModulosPruebasConstructorTest() en C:\CAFSoft\Proyectos\Generador2012\ModulosPruebasTest\GeneradorModulosPruebasTest.vb:línea 57
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b324711a-53c5-4e58-a8ad-0e9cbf71c9a8" testId="4ee27bb8-a2cd-7a1a-1b73-367dad79afe2" testName="GeneradorModulosPruebasConstructorTest1" computerName="CIMAWKS003" duration="00:00:00.0025126" startTime="2012-10-11T10:42:53.7439469-04:00" endTime="2012-10-11T10:42:53.7599469-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b324711a-53c5-4e58-a8ad-0e9cbf71c9a8">
+      <Output>
+        <ErrorInfo>
+          <Message>Error de Assert.Inconclusive. TODO: Implementar código para comprobar el destino</Message>
+          <StackTrace>   en ModulosPruebasTest.GeneradorModulosPruebasTest.GeneradorModulosPruebasConstructorTest1() en C:\CAFSoft\Proyectos\Generador2012\ModulosPruebasTest\GeneradorModulosPruebasTest.vb:línea 66
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c3b1d074-da0f-4e46-88fb-f2c041dd5f3e" testId="98bd90ff-d47f-9e30-2913-436ad446c212" testName="GeneradorModulosPruebasConstructorTest2" computerName="CIMAWKS003" duration="00:00:00.0060067" startTime="2012-10-11T10:42:53.7639469-04:00" endTime="2012-10-11T10:42:53.7869469-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3b1d074-da0f-4e46-88fb-f2c041dd5f3e">
+      <Output>
+        <ErrorInfo>
+          <Message>Error de Assert.Inconclusive. TODO: Implementar código para comprobar el destino</Message>
+          <StackTrace>   en ModulosPruebasTest.GeneradorModulosPruebasTest.GeneradorModulosPruebasConstructorTest2() en C:\CAFSoft\Proyectos\Generador2012\ModulosPruebasTest\GeneradorModulosPruebasTest.vb:línea 75
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

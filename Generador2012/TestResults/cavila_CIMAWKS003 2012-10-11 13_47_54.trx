@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="aaa5b72c-2afd-4491-ae5d-4089ce1b0af2" name="cavila@CIMAWKS003 2012-10-11 13:47:54" runUser="CIMAGROUP\cavila" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="8c65fd7e-c833-49e0-af37-4006e2e30d8c">
+    <Description>Esta es la configuración de pruebas predeterminada para una ejecución de pruebas local.</Description>
+    <Deployment enabled="false" runDeploymentRoot="cavila_CIMAWKS003 2012-10-11 13_47_54">
+      <DeploymentItem filename="C:\CAFSoft\Proyectos\Generador2012\BussinesObject\bin\Release\Cimagroup.Generador2012.GeneradorBussinesObject.dll" />
+      <DeploymentItem filename="C:\CAFSoft\Proyectos\Generador2012\DataAccessLayer\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.dll" />
+      <DeploymentItem filename="C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorBussinesLogic.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-10-11T13:47:54.4059299-04:00" queuing="2012-10-11T13:47:54.6909299-04:00" start="2012-10-11T13:47:54.7529299-04:00" finish="2012-10-11T13:47:56.0779299-04:00" />
+  <ResultSummary outcome="Inconclusive">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="1" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GenerarTest" storage="c:\cafsoft\proyectos\generador2012\modulospruebastest\bin\release\modulospruebastest.dll" id="6ab5866c-2f76-d884-8010-a5c827ca6ed2">
+      <Execution id="98a88aa0-b923-40df-ab27-11c66408acd5" />
+      <TestMethod codeBase="C:/CAFSoft/Proyectos/Generador2012/ModulosPruebasTest/bin/Release/ModulosPruebasTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ModulosPruebasTest.UnitTestTest, ModulosPruebasTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GenerarTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Resultados que no están en la lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6ab5866c-2f76-d884-8010-a5c827ca6ed2" executionId="98a88aa0-b923-40df-ab27-11c66408acd5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="98a88aa0-b923-40df-ab27-11c66408acd5" testId="6ab5866c-2f76-d884-8010-a5c827ca6ed2" testName="GenerarTest" computerName="CIMAWKS003" duration="00:00:00.6919640" startTime="2012-10-11T13:47:54.7799299-04:00" endTime="2012-10-11T13:47:56.0249299-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="98a88aa0-b923-40df-ab27-11c66408acd5">
+      <Output>
+        <ErrorInfo>
+          <Message>Error de Assert.Inconclusive. Un método que no devuelve ningún valor no se puede comprobar.</Message>
+          <StackTrace>   en ModulosPruebasTest.UnitTestTest.GenerarTest() en C:\CAFSoft\Proyectos\Generador2012\ModulosPruebasTest\UnitTestTest.vb:línea 67
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

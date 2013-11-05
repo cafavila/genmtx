@@ -1,0 +1,10 @@
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\bin\Release\SubsidiarioDPM.exe.config
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\bin\Release\SubsidiarioDPM.exe
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\bin\Release\SubsidiarioDPM.pdb
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\bin\Release\SubsidiarioDPM.xml
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Release\SubsidiarioDPM.Resources.resources
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Release\SubsidiarioDPM.SubsidiarioFrm.resources
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Release\SubsidiarioDPM.vbproj.GenerateResource.Cache
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Release\SubsidiarioDPM.exe
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Release\SubsidiarioDPM.xml
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Release\SubsidiarioDPM.pdb

@@ -1,0 +1,10 @@
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\bin\Debug\Generador2012BO.dll
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\bin\Debug\Generador2012BO.pdb
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\bin\Debug\Generador2012BO.xml
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\obj\Debug\ResolveAssemblyReference.cache
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\obj\Debug\Generador2012BO.Resources.resources
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\obj\Debug\GenerateResource.read.1.tlog
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\obj\Debug\GenerateResource.write.1.tlog
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\obj\Debug\Generador2012BO.dll
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\obj\Debug\Generador2012BO.xml
+C:\CAFSoft\Proyectos\Generador2012\Generador2012BO\obj\Debug\Generador2012BO.pdb

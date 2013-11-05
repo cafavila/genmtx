@@ -1,0 +1,170 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Cimagroup.Generador2012.GeneradorBussinesObject
+</name>
+</assembly>
+<members>
+<member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mSistema">
+	<summary>
+ $_SIS_FIL
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mTimestamp">
+	<summary>
+ $_TIME_STP
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mIndicadorPrimerArchivo">
+	<summary>
+ $_IND_ARCH_FST
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mMove">
+	<summary>
+ $_PI_MOVE
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mLargoHeader">
+	<summary>
+ $_LRG_HDR
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mLargoSend">
+	<summary>
+ $_LRG_SND
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mLargoReceive">
+	<summary>
+ $_LRG_RCV
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mComplementoNumerico">
+	<summary>
+ $_CPL_NUM_INI
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mAtributo">
+	<summary>
+ $_ATR_PRT
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mNemotecnico">
+	<summary>
+ $_IDN_TFL
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mTag">
+	<summary>
+ $_CVT_TAG
+ </summary>
+</member><member name="F:Cimagroup.Generador2012.GeneradorBussinesObject.CabeceraMtx.mDescripcion">
+	<summary>
+ $_CVT_DESC
+ </summary>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.CodigoTipoTabla">
+	<summary>
+ 05 TAB-COD-TABL
+ </summary>
+	<value>07 TAB-COD-TTAB         PIC X(03).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.CodigoTabla">
+	<summary>
+ 05 TAB-COD-TABL	
+ </summary>
+	<value>07 TAB-COD-CTAB         PIC X(12).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.FechaModificacion">
+	<summary>
+ 05 TAB-STP-ITRN	
+ </summary>
+	<value>07 TAB-FEC-FTRN         PIC 9(08).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.HoraModificacion">
+	<summary>
+ 05 TAB-STP-ITRN	
+ </summary>
+	<value>07 TAB-HRA-HRTR         PIC 9(06).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.IndicadorTipoAccion">
+	<summary>
+ IND. Tipo Acción
+ </summary>
+	<value>03 TAB-MSC-TACC         PIC X(01).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.IndicadorVigencia">
+	<summary>
+ IND. Status
+ </summary>
+	<value>03 TAB-MSC-STAT         PIC X(01).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.CodigoOrigenTransaccion">
+	<summary>
+ Código Origen Transacción	
+ </summary>
+	<value>03 TAB-COD-OTRN	     PIC X(04).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.AutorTransaccion">
+	<summary>
+ Autor Transacción
+ </summary>
+	<value>03 TAB-COD-ATRN     PIC X(12).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.CodigoComputacional">
+	<summary>
+ Código Interno Computacional
+ </summary>
+	<value>03 TAB-CIC-TABL	PIC X(15)</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.CodigoExterno">
+	<summary>
+ Código Externo
+ </summary>
+	<value>03 TAB-EXT-TABL	         PIC X(05).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.DescripcionCorta">
+	<summary>
+ Desc. Corta
+ </summary>
+	<value>03 TAB-GLS-DCOR         PIC X(12).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.Abreviacion">
+	<summary>
+ Abreviación
+ </summary>
+	<value>03 TAB-GLS-ABRV         PIC X(05).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.Descripcion">
+	<summary>
+ Descripción del Código
+ </summary>
+	<value>03 TAB-GLS-DESC             PIC X(40).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Cimagroup.Generador2012.GeneradorBussinesObject.TablaVO.DatosAdicionales">
+	<summary>
+ Datos Anexos
+ </summary>
+	<value>03 TAB-GLS-DATA         PIC X(60).</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="T:My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+</members>
+</doc>

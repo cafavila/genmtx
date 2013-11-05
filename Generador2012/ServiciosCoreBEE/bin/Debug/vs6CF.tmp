@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ServiciosCoreBEE
+</name>
+</assembly>
+<members>
+<member name="M:ServiciosCoreBEE.Servicios.#ctor(Microsoft.Office.Tools.Excel.Factory,System.IServiceProvider)">
+</member><member name="M:ServiciosCoreBEE.Servicios.Initialize">
+</member><member name="M:ServiciosCoreBEE.Servicios.FinishInitialization">
+</member><member name="M:ServiciosCoreBEE.Servicios.InitializeDataBindings">
+</member><member name="M:ServiciosCoreBEE.Servicios.InitializeCachedData">
+</member><member name="M:ServiciosCoreBEE.Servicios.InitializeData">
+</member><member name="M:ServiciosCoreBEE.Servicios.BindToData">
+</member><member name="M:ServiciosCoreBEE.Servicios.StartCaching(System.String)">
+</member><member name="M:ServiciosCoreBEE.Servicios.StopCaching(System.String)">
+</member><member name="M:ServiciosCoreBEE.Servicios.IsCached(System.String)">
+</member><member name="M:ServiciosCoreBEE.Servicios.BeginInitialization">
+</member><member name="M:ServiciosCoreBEE.Servicios.EndInitialization">
+</member><member name="M:ServiciosCoreBEE.Servicios.InitializeControls">
+</member><member name="M:ServiciosCoreBEE.Servicios.InitializeComponents">
+</member><member name="M:ServiciosCoreBEE.Servicios.NeedsFill(System.String)">
+</member><member name="T:ServiciosCoreBEE.Servicios">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.#ctor(Microsoft.Office.Tools.Excel.Factory,System.IServiceProvider)">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.Initialize">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.FinishInitialization">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.InitializeDataBindings">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.InitializeCachedData">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.InitializeData">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.BindToData">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.StartCaching(System.String)">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.StopCaching(System.String)">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.IsCached(System.String)">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.BeginInitialization">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.EndInitialization">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.InitializeControls">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.InitializeComponents">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.NeedsFill(System.String)">
+</member><member name="M:ServiciosCoreBEE.ThisWorkbook.OnShutdown">
+</member><member name="T:ServiciosCoreBEE.ThisWorkbook">
+</member><member name="M:ServiciosCoreBEE.Globals.#ctor">
+</member><member name="T:ServiciosCoreBEE.Globals">
+</member><member name="M:ServiciosCoreBEE.ThisRibbonCollection.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)">
+</member><member name="T:ServiciosCoreBEE.ThisRibbonCollection">
+</member><member name="P:ServiciosCoreBEE.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ServiciosCoreBEE.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ServiciosCoreBEE.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

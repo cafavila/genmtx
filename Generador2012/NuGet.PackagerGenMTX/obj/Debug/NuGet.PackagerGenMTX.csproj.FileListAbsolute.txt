@@ -1,0 +1,7 @@
+C:\1_Paso\Cimagroup\Tools\Fuentes\Generador2012\NuGet.PackagerGenMTX\bin\Debug\NuGet.PackagerGenMTX.dll
+C:\1_Paso\Cimagroup\Tools\Fuentes\Generador2012\NuGet.PackagerGenMTX\bin\Debug\NuGet.PackagerGenMTX.pdb
+C:\1_Paso\Cimagroup\Tools\Fuentes\Generador2012\NuGet.PackagerGenMTX\bin\Debug\log4net.dll
+C:\1_Paso\Cimagroup\Tools\Fuentes\Generador2012\NuGet.PackagerGenMTX\bin\Debug\log4net.xml
+C:\1_Paso\Cimagroup\Tools\Fuentes\Generador2012\NuGet.PackagerGenMTX\obj\Debug\NuGet.PackagerGenMTX.csprojResolveAssemblyReference.cache
+C:\1_Paso\Cimagroup\Tools\Fuentes\Generador2012\NuGet.PackagerGenMTX\obj\Debug\NuGet.PackagerGenMTX.dll
+C:\1_Paso\Cimagroup\Tools\Fuentes\Generador2012\NuGet.PackagerGenMTX\obj\Debug\NuGet.PackagerGenMTX.pdb

@@ -1,0 +1,15 @@
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorBussinesLogic.dll
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorBussinesLogic.pdb
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorBussinesLogic.xml
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorBussinesObject.dll
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.dll
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorBussinesObject.pdb
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorBussinesObject.xml
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.pdb
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.xml
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\obj\Release\Resources.resources
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\obj\Release\Cimagroup.Generador2012.GeneradorBussinesLogic.dll
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\obj\Release\Cimagroup.Generador2012.GeneradorBussinesLogic.xml
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\obj\Release\Cimagroup.Generador2012.GeneradorBussinesLogic.pdb
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\obj\Release\BussinesLogic.vbprojResolveAssemblyReference.cache
+C:\CAFSoft\Proyectos\Generador2012\BussinesLogic\obj\Release\BussinesLogic.vbproj.GenerateResource.Cache

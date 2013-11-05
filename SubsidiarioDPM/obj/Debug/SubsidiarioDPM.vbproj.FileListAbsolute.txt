@@ -1,0 +1,30 @@
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.exe
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.pdb
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.xml
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.Resources.resources
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.SubsidiarioFrm.resources
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.vbproj.GenerateResource.Cache
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.exe
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.xml
+C:\Documents and Settings\cavila.CIMAGROUP\Configuración local\Datos de programa\Temporary Projects\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.pdb
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.exe
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.xml
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.pdb
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.exe
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.pdb
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.xml
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\obj\Debug\ResolveAssemblyReference.cache
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.Resources.resources
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.SubsidiarioFrm.resources
+C:\1_Paso\DAP\Proyectos\Subsidiario\SubsidiarioDPM\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.vbproj.GenerateResource.Cache
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.exe
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.xml
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.pdb
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.exe
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.pdb
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.xml
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.Resources.resources
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.SubsidiarioFrm.resources
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.vbproj.GenerateResource.Cache
+C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.exe.config

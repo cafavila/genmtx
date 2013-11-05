@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ModulosPruebasTest
+</name>
+</assembly>
+<members>
+<member name="P:ModulosPruebasTest.ModeloModulosTESTTest.TestContext">
+	<summary>
+Obtiene o establece el contexto de la prueba que proporciona
+la información y funcionalidad para la ejecución de pruebas actual.
+</summary>
+</member><member name="M:ModulosPruebasTest.ModeloModulosTESTTest.xToStringTest">
+	<summary>
+Una prueba de xToString
+</summary>
+</member><member name="T:ModulosPruebasTest.ModeloModulosTESTTest">
+	<summary>
+Se trata de una clase de prueba para ModeloModulosTESTTest y se pretende que
+contenga todas las pruebas unitarias ModeloModulosTESTTest.
+</summary>
+</member><member name="P:ModulosPruebasTest.UnitTestTest.TestContext">
+	<summary>
+Obtiene o establece el contexto de la prueba que proporciona
+la información y funcionalidad para la ejecución de pruebas actual.
+</summary>
+</member><member name="M:ModulosPruebasTest.UnitTestTest.GenerarTest">
+	<summary>
+Una prueba de Generar
+</summary>
+</member><member name="T:ModulosPruebasTest.UnitTestTest">
+	<summary>
+Se trata de una clase de prueba para UnitTestTest y se pretende que
+contenga todas las pruebas unitarias UnitTestTest.
+</summary>
+</member>
+</members>
+</doc>
