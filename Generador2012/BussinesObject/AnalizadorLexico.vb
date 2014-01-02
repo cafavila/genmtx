@@ -46,6 +46,7 @@
         mtxFinIDX
         mtxInicioTRN
         mtxFinTRN
+        mtxINM
         mtxCMN
         mtxCPP
         mtxSPP
@@ -120,6 +121,7 @@
             mSimbolos.Add("$_DEF", TipoSimbolo.mtxDEF)
             mSimbolos.Add("$_FRM", TipoSimbolo.mtxFRM)
             mSimbolos.Add("$_FMT", TipoSimbolo.mtxFMT)
+            mSimbolos.Add("$_INM", TipoSimbolo.mtxINM)
             mSimbolos.Add("$_CMN", TipoSimbolo.mtxCMN)
             mSimbolos.Add("$_CPP", TipoSimbolo.mtxCPP)
             mSimbolos.Add("$_SPP", TipoSimbolo.mtxSPP)

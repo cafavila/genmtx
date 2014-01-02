@@ -184,6 +184,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
         Public pant As String
         Public prg As String
         Public sprg As String
+        Public inm As String
         Public comm As String
         Public cpp As String
         Public spp As Char
@@ -583,6 +584,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                 While item.TX.Count >= int
                     If Not item.Transaccional(int) Is Nothing Then
                         Dim instancia As String = item.Transaccional(int).instancia
+                        'Debug.Print(">>> " & instancia & " " & item.Transaccional(int).inmando & " - " & item.Transaccional(int).instancia & " - " & item.Transaccional(int).pantalla)
                         WriteLine(String.Format("{0}MOV-GNS-{1}-{2} SECTION.", Space(7), name, int.ToString("00")))
                         WriteLine(String.Format("{0}INI-MOV-GNS-{1}-{2}.", Space(7), name, int.ToString("00")))
                         Dim sComp As String = ""
@@ -1273,7 +1275,15 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                 Dim pant As String = metodos.TrimChr(tran.Pantalla)
                 Dim prg As String = metodos.TrimChr(tran.Programa)
                 Dim comm As String = metodos.TrimChr(tran.Comando)
+                Dim inm As String = metodos.TrimChr(tran.Inmando)
                 Dim comenta As String = metodos.TrimChr(tran.Comentario)
+                Dim instancia As String = tran.Instancia
+                Dim mmnu As String
+                If inm.Trim = "" Then
+                    mmnu = instancia
+                Else
+                    mmnu = inm
+                End If
                 Dim idd As String = Space(8)
                 If Not tran.IDD Is Nothing Then
                     idd = Mid(metodos.TrimChr(tran.IDD), 1)
@@ -1281,17 +1291,17 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                 Dim sCont As String = "X01"
                 sCont = contXYZ & iContXYZ.ToString("00")
                 mMnuTbl.Add(String.Format("REGMNU{0}", sistema))
-                mMnuTbl.Add(String.Format(" {0}{1}{2}{3}{4}{4}{5}PTC{6}", sistema, pant, comm, tran.Instancia, sCont, Space(3), comenta))
+                mMnuTbl.Add(String.Format(" {0}{1}{2}{3}{4}{4}{5}PTC{6}", sistema, pant, comm, mmnu, sCont, Space(3), comenta))
                 mMnuTbl.Add(String.Format("{0}{1}{2}XXXX{3}", Space(7), prg, Space(33), comm))
                 Dim linea As String = String.Format("{0}{1}A{2}{1}F{2}{4}", Space(26), sistema, pant, comm, comenta)
                 If linea.Length > 60 Then
                     mMnuTbl.Add(linea.Substring(0, 60))
                     Dim cmpl As String = linea.Substring(60, linea.Length - 60)
                     cmpl += Space(10 - cmpl.Length)
-                    mMnuTbl.Add(String.Format("{0}0000SIS{1}{2}{3}LINK", cmpl, Space(14), tran.Instancia, Space(7)))
+                    mMnuTbl.Add(String.Format("{0}0000SIS{1}{2}{3}LINK", cmpl, Space(14), mmnu, Space(7)))
                 Else
                     mMnuTbl.Add(String.Format("{0}{1}A{2}{1}F{2}{4}", Space(26), sistema, pant, comm, comenta))
-                    mMnuTbl.Add(String.Format("{0}0000SIS{1}{2}{3}LINK", Space(10), Space(14), tran.Instancia, Space(7)))
+                    mMnuTbl.Add(String.Format("{0}0000SIS{1}{2}{3}LINK", Space(10), Space(14), instancia, Space(7)))
                 End If
                 mMnuTbl.Add(String.Format("{0}{1}{2}OT", Space(38), idd, Space(4)))
                 mMnuTbl.Add("")
@@ -1324,6 +1334,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                 rpf.spp = metodos.TrimChr(tran.SPP)
                 rpf.cnf = metodos.TrimChr(tran.Confirmacion)
                 rpf.comenta = metodos.TrimChr(tran.Comentario)
+                rpf.inm = metodos.TrimChr(tran.Inmando)
                 rpf.idd = Space(8)
                 If Not tran.IDD Is Nothing Then
                     rpf.idd = Mid(metodos.TrimChr(tran.IDD), 1)
@@ -1342,7 +1353,11 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                     actual = rpf.prg
                 End If
                 mRpfTbl.Add(String.Format("REGRPF{0}", sistema))
-                mRpfTbl.Add(String.Format("{0}{1}C{6}{2}{3}{4}{5}", rpf.prg, Space(4), IIf(jInt.ToString.Length > 1, Space(7), Space(8)), rpf.comm, Space(25), rpf.cnf, jInt))
+                If rpf.inm = "" Then
+                    mRpfTbl.Add(String.Format("{0}{1}C{6}{2}{3}{4}{5}", rpf.prg, Space(4), IIf(jInt.ToString.Length > 1, Space(7), Space(8)), rpf.comm, Space(25), rpf.cnf, jInt))
+                Else
+                    mRpfTbl.Add(String.Format("{0}{1}C{6}{2}{3}{4}{5}", rpf.prg, Space(4), IIf(jInt.ToString.Length > 1, Space(7), Space(8)), rpf.inm, Space(25), rpf.cnf, jInt))
+                End If
                 mRpfTbl.Add(String.Format("{0}{1}{2}{3}", Space(15), rpf.sprg.PadRight(12), rpf.cpp, rpf.spp))
                 jInt += 1
             Next
@@ -1407,14 +1422,14 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                 WriteLine(String.Format("{0}03 WSS-RCV-CREQ.", Space(11)))
                 WriteLine(String.Format("{0}05 WSS-RCV-CREQ-1{1}PIC X(00001).", Space(14), Space(28)))
                 WriteLine(String.Format("{0}05 WSS-RCV-CREQ-2{1}PIC X(00002).", Space(14), Space(28)))
-                WriteLine(String.Format("{0}03 WSS-RCV-DAT{1}PIC X({2}).", Space(11), Space(34), mLargoRcv - 103))
+                WriteLine(String.Format("{0}03 WSS-RCV-DAT{1}PIC X({2}).", Space(11), Space(34), (mLargoRcv - 103).ToString("00000")))
                 WriteLine()
                 WriteLine(String.Format("{0}01  WSS-SEGR-RCV REDEFINES WSS-RCV.", Space(7)))
                 WriteLine(String.Format("{0}03 WSS-TAB-SEGR{1}OCCURS {2} TIMES.", Space(11), Space(11), tamañoBuff.ToString("00000")))
                 WriteLine(String.Format("{0}05 WSS-ELE-SEGR{1}PIC X(01024).", Space(14), Space(30)))
                 WriteLine(String.Format("{0}03 WSS-ELE-SEGR-CPL{1}PIC X({2}).", Space(11), Space(29), (mLargoRcv - tamañoBuff * 1024).ToString("00000")))
                 WriteLine(String.Format("{0}01  WSS-RCV-RED REDEFINES WSS-RCV.", Space(7)))
-                WriteLine(String.Format("{0}03 WSS-RCV-RED-ELM{1}OCCURS {2} TIMES{3}PIC X(00001).", Space(11), Space(8), mLargoRcv, Space(4)))
+                WriteLine(String.Format("{0}03 WSS-RCV-RED-ELM{1}OCCURS {2} TIMES{3}PIC X(00001).", Space(11), Space(8), mLargoRcv.ToString("00000"), Space(4)))
                 WriteLine(String.Format("{0}*", Space(6)))
             End If
             For Each item As Cimagroup.Generador2012.GeneradorBussinesObject.ServiciosRequerimiento In mServicios
@@ -1739,7 +1754,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                 WriteLine(String.Format("{0}05 WSS-SND-MENS.", Space(14)))
                 WriteLine(String.Format("{0}07 WSS-SND-MENS1{1}PIC X(00020).", Space(17), Space(26)))
                 WriteLine(String.Format("{0}07 WSS-SND-MENS2{1}PIC X(00059).", Space(17), Space(26)))
-                WriteLine(String.Format("{0}03 WSS-SND-DAT{1}PIC X({2}).", Space(11), Space(34), mLargoSnd - 180))
+                WriteLine(String.Format("{0}03 WSS-SND-DAT{1}PIC X({2}).", Space(11), Space(34), (mLargoSnd - 180).ToString("00000")))
                 WriteLine()
                 WriteLine(String.Format("{0}01  WSS-SEGR-SND REDEFINES WSS-SND.", Space(7)))
                 WriteLine(String.Format("{0}03 WSS-TAB-SEGS{1}OCCURS {2} TIMES.", Space(11), Space(11), tamañoBuff.ToString("00000")))
@@ -2238,7 +2253,15 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                         Dim sCom As String = metodos.TrimChr(item.Transaccional(int).Comando)
                         Dim sPan As String = metodos.TrimChr(item.Transaccional(int).Pantalla)
                         Dim Fout As String = metodos.TrimChr(item.Transaccional(int).FormOut)
-                        Dim nemo As String = String.Format("{0}{1}{2}{3}", mSistema, sPan, sCom, inst)
+                        Dim sInm As String = metodos.TrimChr(item.Transaccional(int).Inmando)
+                        Dim nemo As String = ""
+                        'Debug.Print(sPan & " " & sInm & " " & sCom)
+                        If sInm.Trim() = "" Then
+                            nemo = String.Format("{0}{1}{2}{3}", mSistema, sPan, sCom, inst)
+                        Else
+                            nemo = String.Format("{0}{1}{2}{3}", mSistema, sPan, sCom, sInm)
+                        End If
+                        'Debug.Print(nemo)
                         If Fout = "" Then
                             Fout = Space(3)
                         End If

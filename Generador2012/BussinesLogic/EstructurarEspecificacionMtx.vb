@@ -415,7 +415,21 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                     '  Return False
                 Case TipoSimbolo.mtxInicioTRN
                     vTran = New Transaccional
-                    If getLexema(Indice).TipoIdentificador = TipoSimbolo.mtxFRM Then
+                    Dim first As TipoSimbolo = getLexema(Indice).TipoIdentificador
+                    If first = TipoSimbolo.mtxINM Then
+                        If getLexema(Indice).TipoIdentificador = TipoSimbolo.mtxSignoIgual Then
+                            vTran.Inmando = getLexema(Indice).Identificador
+                            If getLexema(Indice).TipoIdentificador = TipoSimbolo.mtxFRM Then
+                                If getLexema(Indice).TipoIdentificador = TipoSimbolo.mtxSignoIgual Then
+                                    vTran.Pantalla = getLexema(Indice).Identificador
+                                Else
+                                    Debug.Print("Simbolo N° {1} - '{0}', no es el simbolo esperado", lex.Identificador, Indice)
+                                End If
+                            End If
+                        Else
+                            Debug.Print("Simbolo N° {1} - '{0}', no es el simbolo esperado", lex.Identificador, Indice)
+                        End If
+                    ElseIf first = TipoSimbolo.mtxFRM Then
                         If getLexema(Indice).TipoIdentificador = TipoSimbolo.mtxSignoIgual Then
                             vTran.Pantalla = getLexema(Indice).Identificador
                         Else

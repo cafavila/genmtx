@@ -526,6 +526,7 @@
     End Class
     Public Class Transaccional
         Private mPantalla As String
+        Private mInmando As String
         Private mComando As String
         Private mCPP As String
         Private mSPP As String
@@ -544,6 +545,15 @@
             End Get
             Set(value As String)
                 mPantalla = value
+            End Set
+        End Property
+
+        Public Property Inmando As String
+            Get
+                Return mInmando
+            End Get
+            Set(value As String)
+                mInmando = value
             End Set
         End Property
 
