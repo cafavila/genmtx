@@ -12,6 +12,7 @@
         mtxLargoSend
         mtxLargoRecive
         mtxLargoHeader
+        mtxValidaNumerica
         mtxComplementoNumericoInicio
         mtxAtributo
         mtxIndicadorPrimerArchivo
@@ -91,6 +92,7 @@
             mSimbolos.Add("$_PI_MOVE", TipoSimbolo.mtxMove)
             mSimbolos.Add("$_LRG_HDR", TipoSimbolo.mtxLargoHeader)
             mSimbolos.Add("$_ATR_PRT", TipoSimbolo.mtxAtributo)
+            mSimbolos.Add("$_VNM_NUM", TipoSimbolo.mtxValidaNumerica)
             mSimbolos.Add("$_LRG_SND", TipoSimbolo.mtxLargoSend)
             mSimbolos.Add("$_LRG_RCV", TipoSimbolo.mtxLargoRecive)
             mSimbolos.Add("$_IDN_TFL", TipoSimbolo.mtxIndicadorNombreCopy)

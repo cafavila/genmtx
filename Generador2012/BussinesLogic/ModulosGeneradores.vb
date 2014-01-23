@@ -68,7 +68,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
         Public Overrides Sub Generar()
             archivo = String.Format("{0}{1}PD4", mCabecera.Sistema, mCabecera.NemotecnicoFile)
             Header = New HeaderModulosPD(mCabecera.Tag, mCabecera.Timestamp, mArchivoFuente)
-            ModeloModulo = New ModeloModulosPD4(mServicios, mPantallas)
+            ModeloModulo = New ModeloModulosPD4(mServicios, mPantallas, mCabecera.ValidacionNumerica)
             Dim WriterMX As StreamWriter
             WriterMX = New StreamWriter(String.Format("{1}{0}.cbl", archivo, mRuta))
             mStreamWrite = Header.GeneradorHeader(archivo)
@@ -611,15 +611,21 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
         Private mWriteLine As Collection = New Collection()
         Private mServicios As Collection
         Private mPantallas As Collection
+        Private mValNum As Boolean = True
         Public ReadOnly Property LineaWrite As Collection
             Get
                 Return mWriteLine
             End Get
         End Property
-        Public Sub New(service As Collection, form As Collection)
+        Public Sub New(service As Collection, form As Collection, vnum As String)
             mWriteLine = New Collection()
             mServicios = service
             mPantallas = form
+            If vnum = "VNM" Then
+                mValNum = False
+            Else
+                mValNum = True
+            End If
         End Sub
         Private Sub WriteLine(linea As String)
             mWriteLine.Add(linea)
@@ -649,6 +655,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                                 Dim sNum As String
                                 Dim inicio As Integer
                                 Dim largo As Integer
+                                Dim enter As String
                                 strEN = String.Format("{0}VN-TP-{1}-{2}-{3} SECTION.", Space(7), name, int.ToString("00"), fieldTP(j).NombreCobol)
                                 vnpt.Add(strEN)
                                 strEN = String.Format("{0}VNI-TP-{1}-{2}-{3}.", Space(7), name, int.ToString("00"), fieldTP(j).NombreCobol)
@@ -672,6 +679,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                                     inicio = fieldTP(j).DescripcionNumerica.ToString.IndexOf("(")
                                     largo = (fieldTP(j).DescripcionNumerica.ToString.IndexOf(",")) - (inicio + 1)
                                     sNum = fieldTP(j).DescripcionNumerica.ToString.Substring(inicio + 1, largo)
+                                    enter = sNum
                                     strEN = String.Format("{0}MOVE {1} TO NUM-NENT.", Space(11), sNum)
                                     vnpt.Add(strEN)
                                     inicio = fieldTP(j).DescripcionNumerica.ToString.IndexOf(",")
@@ -685,7 +693,11 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                                     vnpt.Add(strEN)
                                     strEN = String.Format("{0}MOVE SPACES TO TP-{1}-{2}-{3}(TPG-L, TPG-M)", Space(14), name, int.ToString("00"), fieldTP(j).NombreCobol)
                                     vnpt.Add(strEN)
-                                    strEN = String.Format("{0}MOVE NUM-NN9V TO", Space(14))
+                                    If mValNum Then
+                                        strEN = String.Format("{0}MOVE NUM-NN9V TO", Space(14))
+                                    Else
+                                        strEN = String.Format("{0}MOVE VNM-{1}{2} TO", Space(14), CInt(enter).ToString("00"), (18 - CInt(enter)).ToString("00"))
+                                    End If
                                     vnpt.Add(strEN)
                                     strEN = String.Format("{0}TP-{1}-{2}-{3}-NUM(TPG-L, TPG-M).", Space(19), name, int.ToString("00"), fieldTP(j).NombreCobol)
                                     vnpt.Add(strEN)
@@ -722,6 +734,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                                     inicio = fieldTP(j).DescripcionNumerica.ToString.IndexOf("(")
                                     largo = (fieldTP(j).DescripcionNumerica.ToString.IndexOf(",")) - (inicio + 1)
                                     sNum = fieldTP(j).DescripcionNumerica.ToString.Substring(inicio + 1, largo)
+                                    enter = sNum
                                     strEN = String.Format("{0}MOVE {1} TO NUM-NENT.", Space(11), sNum)
                                     vnpt.Add(strEN)
                                     inicio = fieldTP(j).DescripcionNumerica.ToString.IndexOf(",")
@@ -735,7 +748,12 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                                     vnpt.Add(strEN)
                                     strEN = String.Format("{0}MOVE SPACES TO TP-{1}-{2}-{3}(TPG-L)", Space(14), name, int.ToString("00"), fieldTP(j).NombreCobol)
                                     vnpt.Add(strEN)
-                                    strEN = String.Format("{0}MOVE NUM-NN9V TO TP-{1}-{2}-{3}-NUM(TPG-L).", Space(14), name, int.ToString("00"), fieldTP(j).NombreCobol)
+                                    If mValNum Then
+                                        strEN = String.Format("{0}MOVE NUM-NN9V TO TP-{1}-{2}-{3}-NUM(TPG-L).", Space(14), name, int.ToString("00"), fieldTP(j).NombreCobol)
+                                    Else
+                                        strEN = String.Format("{0}MOVE VNM-{4}{5} TO TP-{1}-{2}-{3}-NUM(TPG-L).", Space(14), name, int.ToString("00"), fieldTP(j).NombreCobol, CInt(enter).ToString("00"), (18 - CInt(enter)).ToString("00"))
+                                        'strEN = String.Format("{0}MOVE VNM-{1}{2} TO", Space(14), enter, (18 - CInt(enter)).ToString("00"))
+                                    End If
                                     vnpt.Add(strEN)
                                     strEN = String.Format("{0}ADD 1 TO TPG-L.", Space(11))
                                     vnpt.Add(strEN)
@@ -756,6 +774,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                                     inicio = fieldTP(j).DescripcionNumerica.ToString.IndexOf("(")
                                     largo = (fieldTP(j).DescripcionNumerica.ToString.IndexOf(",")) - (inicio + 1)
                                     sNum = fieldTP(j).DescripcionNumerica.ToString.Substring(inicio + 1, largo)
+                                    enter = sNum
                                     strEN = String.Format("{0}MOVE {1} TO NUM-NENT.", Space(11), sNum)
                                     vnpt.Add(strEN)
                                     inicio = fieldTP(j).DescripcionNumerica.ToString.IndexOf(",")
@@ -769,15 +788,19 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                                     vnpt.Add(strEN)
                                     strEN = String.Format("{0}MOVE SPACES TO TP-{1}-{2}-{3}", Space(14), name, int.ToString("00"), fieldTP(j).NombreCobol)
                                     vnpt.Add(strEN)
-                                    strEN = String.Format("{0}MOVE NUM-NN9V TO TP-{1}-{2}-{3}-NUM.", Space(14), name, int.ToString("00"), fieldTP(j).NombreCobol)
+                                    If mValNum Then
+                                        strEN = String.Format("{0}MOVE NUM-NN9V TO TP-{1}-{2}-{3}-NUM.", Space(14), name, int.ToString("00"), fieldTP(j).NombreCobol)
+                                    Else
+                                        strEN = String.Format("{0}MOVE VNM-{4}{5} TO TP-{1}-{2}-{3}-NUM.", Space(14), name, int.ToString("00"), fieldTP(j).NombreCobol, CInt(enter).ToString("00"), (18 - CInt(enter)).ToString("00"))
+                                    End If
                                     vnpt.Add(strEN)
-                                End If
-                                strEN = String.Format("{0}VNF-TP-{1}-{2}-{3}.", Space(7), name, int.ToString("00"), fieldTP(j).NombreCobol)
-                                vnpt.Add(strEN)
-                                strEN = String.Format("{0}EXIT.", Space(11))
-                                vnpt.Add(strEN)
-                                strEN = ""
-                                vnpt.Add(strEN)
+                                    End If
+                                    strEN = String.Format("{0}VNF-TP-{1}-{2}-{3}.", Space(7), name, int.ToString("00"), fieldTP(j).NombreCobol)
+                                    vnpt.Add(strEN)
+                                    strEN = String.Format("{0}EXIT.", Space(11))
+                                    vnpt.Add(strEN)
+                                    strEN = ""
+                                    vnpt.Add(strEN)
                             End If
                             j += 1
                         End While
@@ -1716,13 +1739,25 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
         Private mServicios As Collection
         Private mPantallas As Collection
         Private mSistema As String
+        Private mNemo As String
         Private mLargoSnd As Integer
         Private mAtributos As Boolean
         Private mFirst As Boolean = True
         Dim metodos As New MetodosAuxiliares
+        ' Variables para el manejo de las estructuras de mensajes, estos seran utilizados en procesos JSON
+        Private mMsgServiceSalida As New EstructuraJSON.EstructuraSalida
+        Private mServicioColeccion As New Collection()
+        Private mMsgService As EstructuraJSON.ServiceMessage
+        Private mMsgData As EstructuraJSON.DataOccs
+        Private mMsgCampos As EstructuraJSON.Campos
         Public ReadOnly Property LineaWrite As Collection
             Get
                 Return mWriteLine
+            End Get
+        End Property
+        Public ReadOnly Property MensajeSalida As EstructuraJSON.EstructuraSalida
+            Get
+                Return mMsgServiceSalida
             End Get
         End Property
         Public Sub New(service As Collection, form As Collection, cabecera As CabeceraMtx)
@@ -1732,6 +1767,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
             mSistema = cabecera.Sistema
             mLargoSnd = cabecera.LargoSend
             mAtributos = cabecera.Atributos
+            mNemo = cabecera.NemotecnicoFile
             If metodos.TrimChr(cabecera.IndicadorPrimerArchivo) = "S" Then
                 mFirst = True
             Else
@@ -1744,6 +1780,9 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
         Private Sub WriteLine()
             mWriteLine.Add("")
         End Sub
+        Public Function sendMSG() As EstructuraJSON.EstructuraSalida
+            Return mMsgServiceSalida
+        End Function
         Public Function Contextualizar() As Microsoft.VisualBasic.Collection Implements IModulos.Contextualizar
             If mFirst Then
                 Dim tamañoBuff As Integer = mLargoSnd \ 1024
@@ -1764,7 +1803,9 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
             End If
             For Each item As Cimagroup.Generador2012.GeneradorBussinesObject.ServiciosRequerimiento In mServicios
                 GeneraTP(item)
+                GeneraTP_v2A(item)
                 GeneraTX(item)
+                mMsgServiceSalida.MensajeSalida.Add(mServicioColeccion)
             Next
             For Each line As String In mTP
                 WriteLine(line)
@@ -1780,8 +1821,13 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                 WriteLine(String.Format("{0}05 TX-TAB-CHR OCCURS {2} TIMES{1}PIC X(00001).", Space(14), Space(13), mLargoSnd))
             End If
             WriteLine()
+            printTest()
             Return mWriteLine
         End Function
+        Private Sub printTest()
+            Dim srvOutPrint As New GeneradorModulosPruebas.GeneradorSalidaTest(MensajeSalida, mSistema, mNemo, "C:\1_Paso\Generador2012\Output\")
+            srvOutPrint.Generar()
+        End Sub
         Private Sub GeneraTP(item As ServiciosRequerimiento)
             Dim name As String = metodos.TrimChr(item.Nombre)
             mTP.Add(String.Format("{0}*  =========================== TP-{1} ===========================", Space(6), name))
@@ -1970,6 +2016,147 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
             End If
             mTP.Add(String.Format("{0}*", Space(6)))
             mTP.Add(String.Format("{0}*", Space(6)))
+        End Sub
+        Private Sub GeneraTP_v2A(item As ServiciosRequerimiento)
+            Dim name As String = metodos.TrimChr(item.Nombre)
+            mMsgService = New EstructuraJSON.ServiceMessage
+            mMsgService.Servicio = "TP-" & name
+            mMsgService.Descripcion = metodos.TrimChr(item.Descripcion)
+            mMsgService.ServicioTuxedo = item.MetodoJava
+            mMsgService.Data = New Collection()
+            ' Agrega campo estado
+            mMsgCampos = New EstructuraJSON.Campos()
+            mMsgCampos.NombreCobol = String.Format("TP-{0}-STAT", name)
+            mMsgCampos.Etiqueta = "Estado"
+            mMsgCampos.Largo = "1"
+            mMsgService.Data.Add(mMsgCampos)
+            ' Agrega campo mensaje
+            mMsgCampos = New EstructuraJSON.Campos()
+            mMsgCampos.NombreCobol = String.Format("TP-{0}-MENS", name)
+            mMsgCampos.Etiqueta = "Mensaje"
+            mMsgCampos.Largo = "79"
+            mMsgService.Data.Add(mMsgCampos)
+
+            Dim iLarge As Integer = mLargoSnd - 80
+            Dim int As Integer = 1
+            Dim countIndex As Integer = 0
+            Dim greenBool As Boolean = False
+            While item.TP.Count >= int
+                Dim pant As Cimagroup.Generador2012.GeneradorBussinesObject.StructureReq = item.TP(int)
+                Dim fieldTP As New ArrayList()
+                'Dim sIns As String = "+++"
+                'Dim sCom As String = "..."
+                'If int <= item.Transaccional.Count Then
+                '    If Not item.Transaccional(int) Is Nothing Then
+                '        sIns = item.Transaccional(int).Instancia
+                '        sCom = metodos.TrimChr(item.Transaccional(int).Comando)
+                '    End If
+                'End If
+                'mTP.Add(String.Format("{0}*>> {1}-{2}-{3}-{4} ({5})", Space(6), mSistema, pant.Pantalla, sCom, sIns, pant.Server))
+                fieldTP = metodos.getCamposForEdition(pant.Pantalla, pant.Server, mPantallas)
+                Dim j As Integer = 0
+                Dim interOcc As Boolean = False
+                If Not (fieldTP Is Nothing) Then
+                    'If pant.Index > 0 Then
+                    '    mTP.Add(String.Format("{0}05 TP-{1}-DMSG-IDX-1-{2} OCCURS {3} TIMES.", Space(14), name, int.ToString("00"), pant.Index))
+                    'End If
+                    While j < fieldTP.Count
+                        greenBool = True
+                        If fieldTP(j).indice > 0 Then
+                            interOcc = True
+                            countIndex += 1
+                        Else
+                            interOcc = False
+                            countIndex = 0
+                        End If
+                        'If j < 1 And fieldTP(j).indice > 0 Then
+                        '    mTP.Add(String.Format("{0}07 TP-{1}-FLD-HST OCCURS {3} TIMES.", Space(17), name, int.ToString("00"), fieldTP(j).indice))
+                        'ElseIf countIndex = 1 And pant.Index < 1 And j > 1 Then
+                        '    mTP.Add(String.Format("{0}05 TP-{1}-FLD-HST OCCURS {3} TIMES.", Space(14), name, int.ToString("00"), fieldTP(j).indice))
+                        'End If
+                        Dim tamaño As Integer = fieldTP(j).Tamaño
+                        If pant.Index > 0 And fieldTP(j).indice > 0 Then
+                            If mAtributos Or item.Atributos Then
+                                ' Agrega Campos para estructura JSON Atributo
+                                mMsgCampos = New EstructuraJSON.Campos()
+                                mMsgCampos.NombreCobol = String.Format("TP-{0}-{1}-{2}-ATR", name, int.ToString("00"), fieldTP(j).NombreCobol)
+                                mMsgCampos.Etiqueta = metodos.TrimChr(fieldTP(j).Etiqueta)
+                                mMsgCampos.nombreTux = fieldTP(j).NombreFML
+                                mMsgCampos.NombreJava = fieldTP(j).NombreJava
+                                mMsgCampos.Largo = "1"
+                                mMsgService.Data.Add(mMsgCampos)
+
+                                iLarge -= fieldTP(j).indice * pant.Index
+                            End If
+                            ' Agrega Campos para estructura JSON Cobol
+                            mMsgCampos = New EstructuraJSON.Campos()
+                            mMsgCampos.NombreCobol = String.Format("TP-{0}-{1}-{2}", name, int.ToString("00"), fieldTP(j).NombreCobol)
+                            mMsgCampos.Etiqueta = metodos.TrimChr(fieldTP(j).Etiqueta)
+                            mMsgCampos.nombreTux = fieldTP(j).NombreFML
+                            mMsgCampos.NombreJava = fieldTP(j).NombreJava
+                            mMsgCampos.Largo = tamaño
+                            mMsgService.Data.Add(mMsgCampos)
+
+                            iLarge -= (tamaño * pant.Index) * fieldTP(j).indice
+                        ElseIf pant.Index > 0 Or fieldTP(j).indice > 0 Then
+                            If mAtributos Or item.Atributos Then
+                                ' Agrega Campos para estructura JSON Atributo
+                                mMsgCampos = New EstructuraJSON.Campos()
+                                mMsgCampos.NombreCobol = String.Format("TP-{0}-{1}-{2}-ATR", name, int.ToString("00"), fieldTP(j).NombreCobol)
+                                mMsgCampos.Etiqueta = metodos.TrimChr(fieldTP(j).Etiqueta)
+                                mMsgCampos.nombreTux = fieldTP(j).NombreFML
+                                mMsgCampos.NombreJava = fieldTP(j).NombreJava
+                                mMsgCampos.Largo = "1"
+                                mMsgService.Data.Add(mMsgCampos)
+
+                                If pant.Index > 0 Then
+                                    iLarge -= pant.Index
+                                Else
+                                    iLarge -= fieldTP(j).indice
+                                End If
+                            End If
+                            ' Agrega Campos para estructura JSON Cobol
+                            mMsgCampos = New EstructuraJSON.Campos()
+                            mMsgCampos.NombreCobol = String.Format("TP-{0}-{1}-{2}", name, int.ToString("00"), fieldTP(j).NombreCobol)
+                            mMsgCampos.Etiqueta = metodos.TrimChr(fieldTP(j).Etiqueta)
+                            mMsgCampos.nombreTux = fieldTP(j).NombreFML
+                            mMsgCampos.NombreJava = fieldTP(j).NombreJava
+                            mMsgCampos.Largo = tamaño
+                            mMsgService.Data.Add(mMsgCampos)
+                        End If
+                        If pant.Index > 0 Then
+                            iLarge -= (tamaño * pant.Index)
+                        Else
+                            iLarge -= (tamaño * fieldTP(j).indice)
+                        End If
+                        If mAtributos Or item.Atributos Then
+                            ' Agrega Campos para estructura JSON Atributo
+                            mMsgCampos = New EstructuraJSON.Campos()
+                            mMsgCampos.NombreCobol = String.Format("TP-{0}-{1}-{2}-ATR", name, int.ToString("00"), fieldTP(j).NombreCobol)
+                            mMsgCampos.Etiqueta = metodos.TrimChr(fieldTP(j).Etiqueta)
+                            mMsgCampos.nombreTux = fieldTP(j).NombreFML
+                            mMsgCampos.NombreJava = fieldTP(j).NombreJava
+                            mMsgCampos.Largo = "1"
+                            mMsgService.Data.Add(mMsgCampos)
+
+                            iLarge -= 1
+                        End If
+                        ' Agrega Campos para estructura JSON Cobol
+                        mMsgCampos = New EstructuraJSON.Campos()
+                        mMsgCampos.NombreCobol = String.Format("TP-{0}-{1}-{2}", name, int.ToString("00"), fieldTP(j).NombreCobol)
+                        mMsgCampos.Etiqueta = metodos.TrimChr(fieldTP(j).Etiqueta)
+                        mMsgCampos.nombreTux = fieldTP(j).NombreFML
+                        mMsgCampos.NombreJava = fieldTP(j).NombreJava
+                        mMsgCampos.Largo = tamaño
+                        mMsgService.Data.Add(mMsgCampos)
+
+                        iLarge -= tamaño
+                j += 1
+            End While
+                End If
+                int += 1
+            End While
+            mServicioColeccion.Add(mMsgService)
         End Sub
         Private Sub GeneraTX(item As ServiciosRequerimiento)
             Dim name As String = metodos.TrimChr(item.Nombre)
@@ -2416,7 +2603,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
 
             WriteLine(String.Format("{0}77 WSS-TAG-{1}{2}PIC X(0125) VALUE", Space(7), mArchivo, Space(11)))
             WriteLine(String.Format("{0}'<IDNMOD NOM=${1}$ VSN=${2}$ GEN=${3}", Space(11), mArchivo, Environment.Version, Date.Now.ToShortDateString))
-            WriteLine(String.Format("{0}-{1}'TMS=${2}$ FNC=${3}$/>'.", Space(6), Space(4), mTimestamp.Substring(1, mTimestamp.Length - 2), mTag))
+            WriteLine(String.Format("{0}-{1}'TMS=${2}$ FNC=${3}$/>'.", Space(6), Space(4), mTimestamp.Substring(1, mTimestamp.Length - 2), mTag.Substring(1, mTag.Length - 2)))
             WriteLine(String.Format("{0}*", Space(6)))
 
             Dim wrSection As Collection = New Collection()
@@ -2556,14 +2743,14 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
             wrLinea.Add(String.Format("{0}PERFORM PRO-BYA.", Space(11)))
             wrLinea.Add(String.Format("{0}PERFORM EDT-NUM-PT-REQ-{1}.", Space(11), servicio))
             Dim int As Integer = 1
-            While service.PT.Count >= int
+            While service.PT.Count >= int - 1
                 wrLinea.Add(String.Format("{0}PERFORM MOV-GNS-{1}-{2}.", Space(11), servicio, int.ToString("00")))
                 wrLinea.Add(String.Format("{0}PERFORM MOV-PT-TX-{1}-{2}.", Space(11), servicio, int.ToString("00")))
                 int += 1
             End While
             wrLinea.Add("")
             wrLinea.Add(String.Format("{0}PERFORM PUT-TDI.", Space(11)))
-            wrLinea.Add(String.Format("{0}PERFORM LNK-MTD.", Space(11)))
+            wrLinea.Add(String.Format("{0}PERFORM LNK-MTI.", Space(11)))
             wrLinea.Add(String.Format("{0}PERFORM GET-TDO.", Space(11)))
             wrLinea.Add("")
             wrLinea.Add(String.Format("{0}IF TDO-COD-STAT NOT = '0'", Space(11)))

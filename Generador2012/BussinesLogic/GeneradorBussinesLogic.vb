@@ -10,6 +10,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
         Dim lexemas As Collection = New Collection()
         Dim Struct As EstructurarEspecificacionMtx
         Dim fileGen As ArrayList = New ArrayList()
+        Dim msgSalida As GeneradorBussinesObject.EstructuraJSON.EstructuraSalida
         Public Event Iniciado(mensaje As String)
         Public Event Terminado()
         Public WriteOnly Property FuenteMTX As GeneradorBussinesObject.ArchivoEspecificacion

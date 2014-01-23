@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnalizadorLexico.vb" />
+    <Compile Include="EstructuraJSON.vb" />
     <Compile Include="EstructuraMtx.vb" />
     <Compile Include="GeneradorBussinesObject.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

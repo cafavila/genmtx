@@ -86,6 +86,12 @@
     <Compile Include="InputMessageForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OutputMessageForm.Designer.vb">
+      <DependentUpon>OutputMessageForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OutputMessageForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UploadForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InputMessageForm.resx">
       <DependentUpon>InputMessageForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutputMessageForm.resx">
+      <DependentUpon>OutputMessageForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UploadForm.resx">
       <DependentUpon>UploadForm.vb</DependentUpon>

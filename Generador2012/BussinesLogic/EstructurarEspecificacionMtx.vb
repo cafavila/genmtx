@@ -110,6 +110,12 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                     Else
                         Debug.Print("Simbolo N° {1} - '{0}', no es el simbolo esperado", lex.Identificador, Indice)
                     End If
+                Case TipoSimbolo.mtxValidaNumerica
+                    If getLexema(Indice).TipoIdentificador = TipoSimbolo.mtxSignoIgual Then
+                        mEstructura.CabeceraMtx.ValidacionNumerica = getLexema(Indice).Identificador
+                    Else
+                        Debug.Print("Simbolo N° {1} - '{0}', no es el simbolo esperado", lex.Identificador, Indice)
+                    End If
                 Case TipoSimbolo.mtxPrefTrans
                     If getLexema(Indice).TipoIdentificador = TipoSimbolo.mtxSignoIgual Then
                         mEstructura.CabeceraMtx.PrefijoTrans = getLexema(Indice).Identificador

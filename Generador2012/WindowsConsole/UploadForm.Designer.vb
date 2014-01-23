@@ -40,6 +40,7 @@ Partial Class UploadForm
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ConvertidorPTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConvertidorTPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -173,7 +174,7 @@ Partial Class UploadForm
         '
         'HerramientasToolStripMenuItem
         '
-        Me.HerramientasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.ToolStripMenuItem1, Me.ConvertidorPTToolStripMenuItem})
+        Me.HerramientasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.ToolStripMenuItem1, Me.ConvertidorPTToolStripMenuItem, Me.ConvertidorTPToolStripMenuItem})
         Me.HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
         Me.HerramientasToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
         Me.HerramientasToolStripMenuItem.Text = "Herramientas"
@@ -194,6 +195,12 @@ Partial Class UploadForm
         Me.ConvertidorPTToolStripMenuItem.Name = "ConvertidorPTToolStripMenuItem"
         Me.ConvertidorPTToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ConvertidorPTToolStripMenuItem.Text = "ConvertidorPT"
+        '
+        'ConvertidorTPToolStripMenuItem
+        '
+        Me.ConvertidorTPToolStripMenuItem.Name = "ConvertidorTPToolStripMenuItem"
+        Me.ConvertidorTPToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ConvertidorTPToolStripMenuItem.Text = "ConvertidorTP"
         '
         'UploadForm
         '
@@ -237,5 +244,6 @@ Partial Class UploadForm
     Friend WithEvents OpcionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ConvertidorPTToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConvertidorTPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -83,6 +83,7 @@
     <Compile Include="EstructurarEspecificacionMtx.vb" />
     <Compile Include="GeneradorBussinesLogic.vb" />
     <Compile Include="GeneradorModulosPruebas.vb" />
+    <Compile Include="GeneradorSalidaTest.vb" />
     <Compile Include="ModulosGeneradores.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

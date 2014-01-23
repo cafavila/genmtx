@@ -37,6 +37,10 @@
         ''' </summary>
         Private mAtributo As Boolean = True
         ''' <summary>
+        ''' $_VNM_NUM 
+        ''' </summary>
+        Private mValidaNum As String = "NUM"
+        ''' <summary>
         ''' $_IDN_TFL
         ''' </summary>
         Private mNemotecnico As String = "MX"
@@ -167,6 +171,14 @@
             End Get
             Set(value As Char)
                 mPrefTrans = value
+            End Set
+        End Property
+        Public Property ValidacionNumerica As String
+            Get
+                Return mValidaNum
+            End Get
+            Set(value As String)
+                mValidaNum = value
             End Set
         End Property
     End Class

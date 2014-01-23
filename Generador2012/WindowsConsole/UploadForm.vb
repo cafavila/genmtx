@@ -86,4 +86,8 @@ Public Class UploadForm
     Private Sub ConvertidorPTToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ConvertidorPTToolStripMenuItem.Click
         InputMessageForm.ShowDialog()
     End Sub
+
+    Private Sub ConvertidorTPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConvertidorTPToolStripMenuItem.Click
+
+    End Sub
 End Class
