@@ -28,3 +28,13 @@ C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.Resour
 C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.SubsidiarioFrm.resources
 C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.vbproj.GenerateResource.Cache
 C:\1_Paso\Cimagroup\Tools\Fuentes\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.exe.config
+C:\cimagroup\CIMApp\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.exe.config
+C:\cimagroup\CIMApp\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.exe
+C:\cimagroup\CIMApp\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.xml
+C:\cimagroup\CIMApp\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.pdb
+C:\cimagroup\CIMApp\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.exe
+C:\cimagroup\CIMApp\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.pdb
+C:\cimagroup\CIMApp\SubsidiarioDPM\bin\Debug\SubsidiarioDPM.xml
+C:\cimagroup\CIMApp\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.Resources.resources
+C:\cimagroup\CIMApp\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.SubsidiarioFrm.resources
+C:\cimagroup\CIMApp\SubsidiarioDPM\obj\Debug\SubsidiarioDPM.vbproj.GenerateResource.Cache

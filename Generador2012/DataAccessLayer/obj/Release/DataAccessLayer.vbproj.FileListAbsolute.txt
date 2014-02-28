@@ -6,3 +6,14 @@ C:\CAFSoft\Proyectos\Generador2012\DataAccessLayer\obj\Release\Cimagroup.Generad
 C:\CAFSoft\Proyectos\Generador2012\DataAccessLayer\obj\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.xml
 C:\CAFSoft\Proyectos\Generador2012\DataAccessLayer\obj\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.pdb
 C:\CAFSoft\Proyectos\Generador2012\DataAccessLayer\obj\Release\DataAccessLayer.vbproj.GenerateResource.Cache
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.dll
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.pdb
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.xml
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\bin\Release\log4net.dll
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\bin\Release\log4net.xml
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\obj\Release\DataAccessLayer.vbprojResolveAssemblyReference.cache
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\obj\Release\Resources.resources
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\obj\Release\DataAccessLayer.vbproj.GenerateResource.Cache
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\obj\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.dll
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\obj\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.xml
+C:\cimagroup\CIMApp\Generador2012\DataAccessLayer\obj\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.pdb

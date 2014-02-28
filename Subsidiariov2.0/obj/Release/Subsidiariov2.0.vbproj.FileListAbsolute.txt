@@ -1,0 +1,10 @@
+C:\cimagroup\CIMApp\Subsidiariov2.0\bin\Release\Subsidiariov2.0.exe.config
+C:\cimagroup\CIMApp\Subsidiariov2.0\bin\Release\Subsidiariov2.0.exe
+C:\cimagroup\CIMApp\Subsidiariov2.0\bin\Release\Subsidiariov2.0.pdb
+C:\cimagroup\CIMApp\Subsidiariov2.0\bin\Release\Subsidiariov2.0.xml
+C:\cimagroup\CIMApp\Subsidiariov2.0\obj\Release\Subsidiariov2._0.SubsidiarioFrm.resources
+C:\cimagroup\CIMApp\Subsidiariov2.0\obj\Release\Subsidiariov2._0.Resources.resources
+C:\cimagroup\CIMApp\Subsidiariov2.0\obj\Release\Subsidiariov2.0.vbproj.GenerateResource.Cache
+C:\cimagroup\CIMApp\Subsidiariov2.0\obj\Release\Subsidiariov2.0.exe
+C:\cimagroup\CIMApp\Subsidiariov2.0\obj\Release\Subsidiariov2.0.xml
+C:\cimagroup\CIMApp\Subsidiariov2.0\obj\Release\Subsidiariov2.0.pdb

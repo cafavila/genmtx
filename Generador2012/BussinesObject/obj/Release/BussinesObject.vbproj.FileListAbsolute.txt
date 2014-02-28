@@ -10,3 +10,17 @@ C:\CAFSoft\Proyectos\Generador2012\BussinesObject\obj\Release\Cimagroup.Generado
 C:\CAFSoft\Proyectos\Generador2012\BussinesObject\obj\Release\Cimagroup.Generador2012.GeneradorBussinesObject.pdb
 C:\CAFSoft\Proyectos\Generador2012\BussinesObject\obj\Release\BussinesObject.vbprojResolveAssemblyReference.cache
 C:\CAFSoft\Proyectos\Generador2012\BussinesObject\obj\Release\BussinesObject.vbproj.GenerateResource.Cache
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\bin\Release\Cimagroup.Generador2012.GeneradorBussinesObject.dll
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\bin\Release\Cimagroup.Generador2012.GeneradorBussinesObject.pdb
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\bin\Release\Cimagroup.Generador2012.GeneradorBussinesObject.xml
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.dll
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\bin\Release\log4net.dll
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.pdb
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\bin\Release\Cimagroup.Generador2012.GeneradorDataAccessLayer.xml
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\bin\Release\log4net.xml
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\obj\Release\BussinesObject.vbprojResolveAssemblyReference.cache
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\obj\Release\Resources.resources
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\obj\Release\BussinesObject.vbproj.GenerateResource.Cache
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\obj\Release\Cimagroup.Generador2012.GeneradorBussinesObject.dll
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\obj\Release\Cimagroup.Generador2012.GeneradorBussinesObject.xml
+C:\cimagroup\CIMApp\Generador2012\BussinesObject\obj\Release\Cimagroup.Generador2012.GeneradorBussinesObject.pdb
