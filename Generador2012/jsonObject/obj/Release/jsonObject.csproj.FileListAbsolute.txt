@@ -1,0 +1,4 @@
+C:\cimagroup\CIMApp\Generador2012\jsonObject\bin\Release\jsonObject.dll
+C:\cimagroup\CIMApp\Generador2012\jsonObject\bin\Release\jsonObject.pdb
+C:\cimagroup\CIMApp\Generador2012\jsonObject\obj\Release\jsonObject.dll
+C:\cimagroup\CIMApp\Generador2012\jsonObject\obj\Release\jsonObject.pdb

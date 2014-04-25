@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Drawing
 Imports Cimagroup.Generador2012
+Imports Cimagroup.Generador2012.jsonObject
 Imports Cimagroup.Generador2012.AnalizadorLexico
 Imports Microsoft.Office.Interop
 Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
@@ -61,6 +62,8 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
             GenerarXls()
             RaiseEvent Terminado()
             GenerarSDI()
+            RaiseEvent Terminado()
+            GenerarJSONDOC()
             RaiseEvent Terminado()
             Print()
             RaiseEvent Terminado()
@@ -313,10 +316,29 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
                     For Each item As Cimagroup.Generador2012.GeneradorBussinesObject.ServiciosRequerimiento In Struct.Estructura.ServiciosReq
                         iInt += 1
                         Dim ma As New Generador2012.GeneradorBussinesLogic.MetodosAuxiliares
-                        Dim transaka As String = "G"
-                        If Struct.Estructura.cabeceraMTX.PrefijoTrans.ToString() <> transaka Then
-                            transaka = Struct.Estructura.cabeceraMTX.sistema.substring(0, 1)
-                        End If
+                        Dim transaka As String
+                        Select Case Struct.Estructura.cabeceraMTX.sistema
+                            Case "BGL"
+                                transaka = "B"
+                            Case "COL"
+                                transaka = "K"
+                            Case "DAP"
+                                transaka = "D"
+                            Case "DEU"
+                                transaka = "E"
+                            Case "GNS"
+                                transaka = "G"
+                            Case "LDC"
+                                transaka = "L"
+                            Case "MC2"
+                                transaka = "M"
+                            Case "SGC"
+                                transaka = "S"
+                            Case "TAB"
+                                transaka = "T"
+                            Case Else
+                                transaka = "G"
+                        End Select
                         Debug.Print(transaka & ma.TrimChr(item.Nombre))
                         hoja.Cells(iInt, 2) = transaka & ma.TrimChr(item.Nombre)
                         hoja.Cells(iInt, 3) = item.Nombre
@@ -437,6 +459,75 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
             cblUnitTest.ArchivoFuente = mFuenteMTX.ArchivoFisico
             cblUnitTest.Ruta = mRuta.Output
             cblUnitTest.Generar()
+        End Sub
+        Private Sub GenerarJSONDOC()
+            Debug.Print("Generar Json Documentacion!!")
+            Dim existe As Boolean = False
+            Try
+                Dim archivo As String = String.Format("{0}DOCSER", Struct.Estructura.cabeceraMTX.sistema)
+                'Header = New HeaderModulosTESTSalida(mCabecera.Tag, mCabecera.Timestamp, mArchivoFuente)
+                Dim WriterMX As StreamWriter
+                WriterMX = New StreamWriter(String.Format("{1}{0}.json", archivo, mRuta.Doc))
+                Dim Servicios As New List(Of Servicio)
+                Try
+                    Dim position As Integer = mFuenteMTX.ArchivoFisico.LastIndexOf("\") + 1
+                    Dim mtxfile As String = mFuenteMTX.ArchivoFisico.Substring(position, mFuenteMTX.ArchivoFisico.LastIndexOf(".") - position)
+                    Dim iInt As Integer = 0
+                    For Each item As Cimagroup.Generador2012.GeneradorBussinesObject.ServiciosRequerimiento In Struct.Estructura.ServiciosReq
+                        iInt += 1
+                        Dim ma As New Generador2012.GeneradorBussinesLogic.MetodosAuxiliares
+                        Dim transaka As String
+                        Dim servis As New Servicio
+                        Select Case Struct.Estructura.cabeceraMTX.sistema
+                            Case "BGL"
+                                transaka = "B"
+                            Case "COL"
+                                transaka = "K"
+                            Case "DAP"
+                                transaka = "D"
+                            Case "DEU"
+                                transaka = "E"
+                            Case "GNS"
+                                transaka = "G"
+                            Case "LDC"
+                                transaka = "L"
+                            Case "MC2"
+                                transaka = "M"
+                            Case "SGC"
+                                transaka = "S"
+                            Case "TAB"
+                                transaka = "T"
+                            Case Else
+                                transaka = "G"
+                        End Select
+                        'Debug.Print(transaka & ma.TrimChr(item.Nombre))
+                        servis.Transaccion = transaka & ma.TrimChr(item.Nombre)
+                        servis.Requerimiento = ma.TrimChr(item.Nombre)
+                        servis.Descripcion = ma.TrimChr(item.Descripcion)
+                        servis.Comando = ma.TrimChr(item.PantallaComando)
+                        servis.XmlTuxedo = ma.TrimChr(item.MetodoJava)
+                        servis.VersionEspecificacionMtx = mtxfile
+                        servis.Programa = New List(Of String)
+                        Dim jInt As Integer = 0
+                        For Each prg In item.Transaccional
+                            servis.Programa.Add(ma.TrimChr(prg.SubPrograma))
+                            jInt += 1
+                        Next
+                        Servicios.Add(servis)
+                    Next
+                    For Each srv In Servicios
+                        Dim linea As String = srv.toJson()
+                        Debug.Print(linea)
+                        WriterMX.WriteLine(linea)
+                    Next
+                Catch Ex As Exception
+                    Debug.Print("ERROR JSON : {0}", Ex.Message)
+                Finally
+                    WriterMX.Close()
+                End Try
+            Catch ex As Exception
+                Debug.Print("ERROR : {0}", ex.Message)
+            End Try
         End Sub
     End Class
 End Namespace

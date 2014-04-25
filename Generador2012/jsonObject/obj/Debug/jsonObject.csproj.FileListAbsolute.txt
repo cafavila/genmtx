@@ -1,0 +1,7 @@
+C:\cimagroup\CIMApp\Generador2012\jsonObject\bin\Debug\Newtonsoft.Json.dll
+C:\cimagroup\CIMApp\Generador2012\jsonObject\bin\Debug\Newtonsoft.Json.xml
+C:\cimagroup\CIMApp\Generador2012\jsonObject\bin\Debug\Cimagroup.Generador2012.jsonObject.dll
+C:\cimagroup\CIMApp\Generador2012\jsonObject\bin\Debug\Cimagroup.Generador2012.jsonObject.pdb
+C:\cimagroup\CIMApp\Generador2012\jsonObject\obj\Debug\jsonObject.csprojResolveAssemblyReference.cache
+C:\cimagroup\CIMApp\Generador2012\jsonObject\obj\Debug\Cimagroup.Generador2012.jsonObject.dll
+C:\cimagroup\CIMApp\Generador2012\jsonObject\obj\Debug\Cimagroup.Generador2012.jsonObject.pdb

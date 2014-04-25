@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsConsole", "WindowsConsole\WindowsConsole.vbproj", "{5451A971-0B08-4C00-BC5F-FE0EE04D4B46}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BussinesObject", "BussinesObject\BussinesObject.vbproj", "{319BCC31-09E9-405E-9C94-658FC46A1357}"
@@ -24,10 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.PackagerGenMTX", "NuGet.PackagerGenMTX\NuGet.PackagerGenMTX.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConvertidorTablas", "ConvertidorTablas\ConvertidorTablas.vbproj", "{A20335CF-D408-4E58-91A7-D88BD2E3E108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jsonObject", "jsonObject\jsonObject.csproj", "{3FD58B5F-734B-457C-BF14-79321681B4A7}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Generador2012.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -113,8 +116,31 @@ Global
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|x86.ActiveCfg = Release|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A20335CF-D408-4E58-91A7-D88BD2E3E108}.Release|x86.ActiveCfg = Release|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3FD58B5F-734B-457C-BF14-79321681B4A7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Generador2012.vsmdi
 	EndGlobalSection
 EndGlobal

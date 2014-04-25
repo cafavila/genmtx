@@ -1,0 +1,11 @@
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\bin\Release\ConvertidorTablas.dll
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\bin\Release\ConvertidorTablas.pdb
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\bin\Release\ConvertidorTablas.xml
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\bin\Release\AppConfig.dll
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\bin\Release\BeeMTXTools.dll
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\obj\Release\ConvertidorTablas.vbprojResolveAssemblyReference.cache
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\obj\Release\Resources.resources
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\obj\Release\ConvertidorTablas.vbproj.GenerateResource.Cache
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\obj\Release\ConvertidorTablas.dll
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\obj\Release\ConvertidorTablas.xml
+C:\cimagroup\CIMApp\Generador2012\ConvertidorTablas\obj\Release\ConvertidorTablas.pdb

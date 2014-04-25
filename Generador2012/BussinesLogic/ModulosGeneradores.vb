@@ -1826,7 +1826,7 @@ Namespace Cimagroup.Generador2012.GeneradorBussinesLogic
         End Function
         Private Sub printTest()
             Dim srvOutPrint As New GeneradorModulosPruebas.GeneradorSalidaTest(MensajeSalida, mSistema, mNemo, "C:\1_Paso\Generador2012\Output\")
-            srvOutPrint.Generar()
+            'srvOutPrint.Generar()
         End Sub
         Private Sub GeneraTP(item As ServiciosRequerimiento)
             Dim name As String = metodos.TrimChr(item.Nombre)

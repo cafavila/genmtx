@@ -53,7 +53,7 @@ Namespace Cimagroup.Generador2012.GeneradorModulosPruebas
                     texto.Add(String.Format("{1}'tuxedo':'{0}',", srv.ServicioTuxedo, Space(4)))
                     Dim bSND As Boolean = False
                     If Not srv.Data Is Nothing Then
-                        texto.Add("    'wss-snd':{")
+                        texto.Add("    'wss-snd':[")
                         bSND = True
                     End If
                     For Each obj As Object In srv.Data
@@ -83,10 +83,10 @@ Namespace Cimagroup.Generador2012.GeneradorModulosPruebas
                         End If
                     Next
                     If bSND Then
-                        texto.Add("              }")
+                        texto.Add("              ]")
                     End If
                 Next
-                texto.Add("},")
+                texto.Add("   },")
             Next
             texto.Add("]")
         End Sub
